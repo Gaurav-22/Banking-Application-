@@ -15,25 +15,25 @@ bcrypt = Bcrypt(app)
 
 def accounts():
     usern = 'C00000001'
-    name = 'ramesh'
+    name = 'gaurav'
     usert = 'executive'
-    passw = 'Ramesh@001'
+    passw = 'gaurav@724'
     passw_hash = bcrypt.generate_password_hash(passw).decode('utf-8')
     db.execute("INSERT INTO users (id,name,user_type,password) VALUES (:u,:n,:t,:p)", {"u": usern,"n":name,"t":usert ,"p": passw_hash})
     db.commit()
     print("accounts Completed ............................................ ")
     usern = 'C00000002'
-    name = 'suresh'
+    name = 'muskan'
     usert = 'cashier'
-    passw = 'Suresh@002'
+    passw = 'muskan@002'
     passw_hash = bcrypt.generate_password_hash(passw).decode('utf-8')
     db.execute("INSERT INTO users (id,name,user_type,password) VALUES (:u,:n,:t,:p)", {"u": usern,"n":name,"t":usert ,"p": passw_hash})
     db.commit()
     print("accounts Completed ............................................ ")
     usern = 'C00000003'
-    name = 'mahesh'
+    name = 'ritik'
     usert = 'teller'
-    passw = 'Mahesh@003'
+    passw = 'ritik@003'
     passw_hash = bcrypt.generate_password_hash(passw).decode('utf-8')
     db.execute("INSERT INTO users (id,name,user_type,password) VALUES (:u,:n,:t,:p)", {"u": usern,"n":name,"t":usert ,"p": passw_hash})
     db.commit()
